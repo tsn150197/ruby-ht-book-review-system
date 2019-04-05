@@ -1,4 +1,7 @@
 $cyan: #30e3ca;
+$red-black: #ff0062;
+$pink-b:#d7ffa9a6;
+$pink-bo: #000000;
 $white-transparent: rgba(255, 255, 255, 0.95);
 
 #bg-site-blocks {
@@ -36,4 +39,10 @@ $white-transparent: rgba(255, 255, 255, 0.95);
 
 .icon-crud {
   height: 25px;
+}
+
+.alert-notice {
+  color: $red-black;
+  background-color: $pink-b;
+  border-color: $pink-bo;
 }
