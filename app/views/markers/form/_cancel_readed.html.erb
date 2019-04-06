@@ -1,0 +1,5 @@
+<%= link_to book_marker_path(@book, @marker), method: :delete,
+  remote: true do %>
+  <%= image_tag "svg/cancel-readed.svg", class: "icon-marker" %>
+  <%= t ".cancel_readed" %>
+<% end %>

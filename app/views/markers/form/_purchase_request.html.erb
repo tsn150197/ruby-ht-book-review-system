@@ -1,0 +1,5 @@
+<%= link_to book_markers_path(@book, status: :purchase_request), method: :post,
+  remote: true do %>
+  <%= image_tag "svg/purchase-request.svg", class: "icon-marker" %>
+  <%= t ".purchase_request" %>
+<% end %>

@@ -1,0 +1,33 @@
+<% provide :title, t(".show_book") %>
+<% provide :icon, "icon/books.png"%>
+<div class="site-section">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-md-7 text-left border-primary">
+        <h2 class="font-weight-light text-primary">
+          <%= t ".show_book" %>
+        </h2>
+      </div>
+    </div>
+    <% if can? %i(create delete), Marker %>
+      <div class="row mt-5">
+        <div class="col-md-3 mb-3" id="marker-favorite">
+          <%= marker_form @book.id, :favorite, current_user %>
+        </div>
+        <div class="col-md-3 mb-3" id="marker-readed">
+          <%= marker_form @book.id, :readed, current_user %>
+        </div>
+        <div class="col-md-3 mb-3" id="marker-reading">
+          <%= marker_form @book.id, :reading, current_user %>
+        </div>
+        <div class="col-md-3 mb-3" id="marker-purchase_request">
+          <%= marker_form @book.id, :purchase_request, current_user %>
+        </div>
+      </div>
+    <% else %>
+      <p class="text-danger h5">
+        <%= t ".no_marker"%>
+      </p>
+    <% end %>
+  </div>
+</div>

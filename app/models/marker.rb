@@ -6,6 +6,8 @@ class Marker < ApplicationRecord
   belongs_to :book
   has_one :activity, as: :activitable, dependent: :destroy
 
+  validates :status, uniqueness: {scope: %i(user_id book_id)}
+
   after_create :create_activities
 
   private

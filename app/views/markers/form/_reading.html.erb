@@ -1,0 +1,5 @@
+<%= link_to book_markers_path(@book, status: :reading), method: :post,
+  remote: true do %>
+  <%= image_tag "svg/reading.svg", class: "icon-marker" %>
+  <%= t ".reading" %>
+<% end %>
