@@ -16,7 +16,6 @@ $(".reviews-js:first").hide().html(`
    <hr>
 `).fadeIn();
 $('#rating-form-edit').raty({
-   path: '/assets/',
    scoreName: 'review[rate]',
    score: <%= @review.rate %>,
 });

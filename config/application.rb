@@ -13,5 +13,9 @@ module RubyHtBookReviewSystem
     config.i18n.default_locale = :en
     config.autoload_paths += %w(#{config.root}/app/models/ckeditor)
     config.middleware.use I18n::JS::Middleware
+    config.assets.paths << Rails.root.join('vendor', 'assets',
+      'fonts', 'flaticon', 'font')
+    config.assets.paths << Rails.root.join('vendor', 'assets',
+      'fonts', 'icomoon', 'fonts')
   end
 end

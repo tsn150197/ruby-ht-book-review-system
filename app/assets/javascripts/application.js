@@ -19,4 +19,5 @@
 //= require activestorage
 //= require i18n/translations
 //= require turbolinks
+//= require jquery.raty.js.erb
 //= require_tree .

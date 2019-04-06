@@ -10,6 +10,7 @@ gem "coffee-rails", "~> 4.2"
 gem "config"
 gem "devise"
 gem "draper"
+gem "faker"
 gem "figaro"
 gem "font-awesome-sass"
 gem "i18n-js"
@@ -30,7 +31,6 @@ gem "uglifier", ">= 1.3.0"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
-  gem "faker"
   gem "rspec-rails"
   gem "simplecov", require: false
 end
