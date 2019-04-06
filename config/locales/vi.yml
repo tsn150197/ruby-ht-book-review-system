@@ -1,4 +1,8 @@
 vi:
+  js:
+    markers:
+      marker: Bạn đã đánh dấu sách là %{marker}
+      cancel_marker: Bạn đã hủy đánh dấu %{marker}
   layouts:
     application:
       book_review: Đánh giá sách
@@ -124,6 +128,10 @@ vi:
       price: Giá
       author: Tác giả
       description: Mô tả
+    show:
+      show_book: Thông tin sách
+      no_marker: Khi đăng nhập, bạn có thể đánh dấu sách là yêu thích, đã đọc,
+        đang đọc,...
     update:
       not_found: Không tìm thấy sách cần cập nhật
       update_success: Cập nhật sách thành công
@@ -166,3 +174,23 @@ vi:
         login: "Đăng nhập"
         signin_with: "Đăng nhập với %{OmniAuth::Utils.camelize(provider)}"
         forgot_your_password: "Quên mật khẩu"
+  markers:
+    form:
+      cancel_favorite:
+        cancel_favorite: Hủy yêu thích
+      cancel_readed:
+        cancel_readed: Hủy đã đọc
+      cancel_reading:
+        cancel_reading: Hủy đang đọc
+      cancel_purchase_request:
+        cancel_purchase_request: Hủy yêu cầu mua
+      favorite:
+        favorite: Yêu thích
+      readed:
+        readed: Đã đọc
+      reading:
+        reading: Đang đọc
+      purchase_request:
+        purchase_request: Yêu cầu mua
+  destroy:
+      marker_not_found: Không tìm thấy đánh dấu
