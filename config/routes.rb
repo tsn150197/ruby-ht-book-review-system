@@ -11,6 +11,9 @@ Rails.application.routes.draw do
     resources :books do
       resources :markers, only: %i(create destroy)
     end
+    resources :users, only: %i(show) do
+      resources :relationships, only: %i(create destroy)
+    end
     resources :purchase_requests, only: %i(index destroy)
     resources :favorites, only: %i(index destroy)
     resources :readed_books, only: %i(index destroy)

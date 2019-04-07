@@ -4,7 +4,7 @@ class FavoritesController < ApplicationController
 
   def index
     @favorites = current_user.markers.created_at_desc
-                            .where(status: :favorite).includes(:book)
+                             .where(status: :favorite).includes(:book)
   end
 
   def destroy
