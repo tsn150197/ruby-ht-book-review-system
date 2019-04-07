@@ -1,4 +1,5 @@
-RSpec.describe PurchaseRequestsController, type: :controller do
+RSpec.describe FavoritesController, type: :controller do
+
   let(:user) {FactoryBot.create :user, :user_devise}
   let(:marker) {FactoryBot.create :marker, user: user}
 

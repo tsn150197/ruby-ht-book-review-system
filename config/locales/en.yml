@@ -17,6 +17,10 @@ en:
       l8: Last
       l9: Next
       l10: Previous
+    favorites:
+      l12: favorites per pages
+      l4: No favorites available
+      l52: total favorite
   layouts:
     application:
       book_review: Book review
@@ -224,3 +228,19 @@ en:
     destroy:
       success: Cancel successful book purchase request
       purchase_request_not_found: Purchase request not found
+  favorites:
+    favorite:
+      cancel: Cancel
+      confirm: You want to cancel the book favorite?
+    index:
+      list_favorites: List favorite books
+      cover_image: Cover image
+      title: Title
+      number_pages: Number pages
+      author: Author
+      price: Price
+      action: Action
+      favorite_time_at: Favorite at
+    destroy:
+      success: Cancel successful favorite book
+      favorite_not_found: Favorite book not found
