@@ -8,16 +8,6 @@ class BooksController < ApplicationController
                  .per Settings.book_in_page
   end
 
-  def show
-    @reviews = Review.where(book_id: @book.id).order_desc.page(params[:page])
-                                              .per Settings.limit_review
-    if @reviews.blank?
-      @average_review = 0
-    else
-      @average_review = Review.average(:rate).round(Settings.average_rate)
-    end
-  end
-
   def new
     @book = Book.new
   end
@@ -32,6 +22,16 @@ class BooksController < ApplicationController
       flash.now[:danger] = t ".create_failure"
       render :new
     end
+  end
+
+  def show
+    @reviews = Review.where(book_id: @book.id).order_desc.page(params[:page])
+                     .per Settings.limit_review
+    @average_review = if @reviews.blank?
+                        0
+                      else
+                        Review.average(:rate).round(Settings.average_rate)
+                      end
   end
 
   def edit; end
